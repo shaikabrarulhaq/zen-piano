@@ -1,0 +1,84 @@
+<!DOCTYPE html> 
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+<body class="disable-select">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="nav-div collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/guide">Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/feedback">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="header guideHeader">
+    <h1>Welcome to the piano guide</h1>
+  </div>
+
+  <div class="piano information">
+    <ul class="piano-box guide">
+      <li><span data-note="C3" class="key white-key">Q</span></li>
+      <li><span data-note="C3#" class="key black-key">2</span></li>
+      <li><span data-note="D3" class="key white-key">W</span></li>
+      <li><span data-note="D3#" class="key black-key">3</span></li>
+      <li><span data-note="E3" class="key white-key">E</span></li>
+      <li><span data-note="F3" class="key white-key">R</span></li>
+      <li><span data-note="F3#" class="key black-key">5</span></li>
+      <li><span data-note="G3" class="key white-key">T</span></li>
+      <li><span data-note="G3#" class="key black-key">6</span></li>
+      <li><span data-note="A4" class="key white-key">Y</span></li>
+      <li><span data-note="A4#" class="key black-key">7</span></li>
+      <li><span data-note="B4" class="key white-key">U</span></li>
+
+      <li><span data-note="C4" class="key white-key">I</span></li>
+      <li><span data-note="C4#" class="key black-key">9</span></li>
+      <li><span data-note="D4" class="key white-key">O</span></li>
+      <li><span data-note="D4#" class="key black-key">0</span></li>
+      <li><span data-note="E4" class="key white-key">P</span></li>
+      <li><span data-note="F4" class="key white-key">Z</span></li>
+      <li><span data-note="F4#" class="key black-key">S</span></li>
+      <li><span data-note="G4" class="key white-key">X</span></li>
+      <li><span data-note="G4#" class="key black-key">D</span></li>
+      <li><span data-note="A5" class="key white-key">C</span></li>
+      <li><span data-note="A5#" class="key black-key">F</span></li>
+      <li><span data-note="B5" class="key white-key">V</span></li>
+
+      <li><span data-note="C5" class="key white-key">B</span></li>
+      <li><span data-note="C5#" class="key black-key">H</span></li>
+      <li><span data-note="D5" class="key white-key">N</span></li>
+      <li><span data-note="D5#" class="key black-key">J</span></li>
+      <li><span data-note="E5" class="key white-key">M</span></li>
+      <li><span data-note="F5" class="key white-key">,</span></li>
+      <li><span data-note="F5#" class="key black-key">L</span></li>
+      <li><span data-note="G5" class="key white-key">.</span></li>
+      <li><span data-note="G5#" class="key black-key">;</span></li>
+      <li><span data-note="A6" class="key white-key"></span></li>
+      <li><span data-note="A6#" class="key black-key"></span></li>
+      <li><span data-note="B6" class="key white-key"></span></li>
+    </ul>
+  </div>
+
+  <div class="information">
+    <ul class="ul-information">
+      <li class=li-information>The above is a no sound piano with the keyboard keys assigned to the piano notes accordingly :)</li>
+      <li class=li-information>The higher notes A6, A6#, B6 are yet to be developed :P</li>
+      <li class=li-information>For starters try playing S S S F J J J H F F F F Z Z Z Z in the real one :D</li>
+      <li class=li-information>More such piano notes in future...</li>
+    </ul>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

@@ -1,0 +1,184 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-variant: small-caps;
+}
+
+
+body {
+    background: url(../../images/music_notes.jpg) no-repeat center center/cover fixed;
+    height: 100%;
+}
+
+.nav-div {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.nav-div ul{
+    margin: 0 auto;
+}
+
+.nav-item {
+    margin: 0 40px 0 40px;
+    font-size: 1.2rem;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.header h1 {
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: bold;
+    color: #fff;
+    font-variant: small-caps;
+    text-shadow: #222 5px 5px 10px;
+    font-size: 3rem;
+    letter-spacing: 3px;
+}
+
+.piano {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 162px;
+}
+
+.piano-box {
+    display: flex;
+    text-align: center;
+}
+
+ul {
+    list-style: none;
+}
+
+span {
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    padding: 5px;
+}
+
+.key {
+    cursor: pointer;
+}
+
+.white-key {
+    background: #fff;
+    border-top: 1px solid rgba(32, 32, 32, .3);
+    border-right: 1px solid rgba(32, 32, 32, .3);
+    border-bottom: 1px solid rgba(32, 32, 32, .3);
+    border-radius: 3px 3px 5px 5px;
+    box-shadow: 0 7px 1px rgb(32, 32, 32, .3);
+    width: 60px;
+    height:300px;
+    transition: background-color 20ms ease,box-shadow 20ms ease;
+    color: #000;
+    font-weight: bold;
+}
+
+.black-key {
+    background: #111;
+    transition: background-color 20ms ease,box-shadow 20ms ease;
+    box-shadow: 0 7px 1px rgb(32, 32, 32, .2);
+    border-width: 1px;
+    border-radius: 3px 3px 5px 5px;
+    border-style: solid;
+    border-color: #666 #111 #111 #666;
+    height: 170px;
+    position: absolute;
+    width:40px;
+    margin-left: -20px;
+    z-index: 5;
+    color: #fff;
+    font-weight: bold;
+}
+
+.white-key.active {
+    transform: translateY(7px);
+    background-color: rgb(215, 215, 215);
+    box-shadow: none;
+}
+
+.black-key.active {
+    transform: translateY(7px);
+    background-color: rgb(25, 25, 25);
+    box-shadow: none;
+}
+
+.guide > li > .white-key:active {
+    transform: translateY(7px);
+    background-color: rgb(215, 215, 215);
+    box-shadow: none;
+}
+
+.guide > li > .black-key:active {
+    transform: translateY(7px);
+    background-color: rgb(25, 25, 25);
+    box-shadow: none;
+}
+
+ul {
+    list-style: none;
+}
+
+.guideHeader {
+    margin : 40px;
+}
+
+.information {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 11px;
+}
+
+.ul-information {
+    padding: 10px 10px;
+}
+
+.li-information {
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: #222 5px 5px 5px
+}
+
+.intro-feedback {
+    text-align: center;
+    font-size: 1.3rem;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: #111 5px 5px 10px;
+    margin-top: 35px;
+}
+
+.feedback-box {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #222;
+    text-shadow: #ddd 2px 2px 20px;
+    letter-spacing: 2px;
+}
+
+.error {
+    height: 71.5vh;
+}
+
+.footer {   
+    color: white;
+    letter-spacing: 2px;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.disable-select{
+    user-select: none;
+}

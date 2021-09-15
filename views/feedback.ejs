@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include('./partials/header.ejs') %>
+
+<body class="disable-select">
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container-fluid">
+      <div class="nav-div collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="/">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="/guide">Guide</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="/feedback">Feedback</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <p class="intro-feedback mb-4">
+    How was it? Suggest any improvement if needed, else can just chill out :D
+  </p>
+
+  <div class="feedback-box container py-4">
+    <form id="contactForm" action="/feedback" method="POST">
+      <div class="mb-4">
+        <label class="form-label" for="name">Name</label>
+        <input class="form-control" id="name" type="text" placeholder="Kamaboko Gonpachiro" name="name"/>
+      </div>
+      <div class="mb-4">
+        <label class="form-label" for="emailAddress">Email Address</label>
+        <input class="form-control" name="email" id="emailAddress" type="email" placeholder="abc@email.com" style/>
+      </div>
+      <div class="mb-5">
+        <label class="form-label" for="message">Message</label>
+        <textarea class="form-control" name="message" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+      </div>
+      <div class="d-grid mb-4">
+        <button class="btn btn-primary btn-lg bg-dark" type="submit">Submit</button>
+      </div>      
+    </form>
+  </div>
+
+  <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
