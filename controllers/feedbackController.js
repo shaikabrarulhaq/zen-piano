@@ -1,11 +1,13 @@
 const Feedback = require('../models/feedback');
 const nodemailer = require('nodemailer');
 
+require('dotenv').config();
+
 var transporter = nodemailer.createTransport({
 	service: 'gmail',
 	auth: {
-        user: 's.abrar.ul.haq.official@gmail.com',
-		pass: 'sauh<business>'
+        user: process.env.MAIL_USERNAME,
+		pass: process.env.MAIL_PASSWORD
 	}
 });
 
@@ -18,10 +20,9 @@ const feedback_post = (req, res) => {
     feedback.save()
         .then((result) => {
             var mailOptions = {
-                from: 's.abrar.ul.haq.official@gmail.com',
-                to: 'sauh.zen.piano.official@gmail.com',
-                subject: 'Feedback: Alpha Piano',
-                text: req.body.message + "\n\nFrom,\n" + req.body.email
+                to: process.env.TO_MAIL_USERNAME,
+                subject: 'Feedback: Zen Piano',
+                text: req.body.message + "\n\nFrom,\n" + req.body.name + "\n" + req.body.email
             };
             transporter.sendMail(mailOptions, function(err, info){
                 if (err) console.log(err);

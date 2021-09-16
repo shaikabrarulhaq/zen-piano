@@ -1,20 +1,19 @@
 const express = require('express');
-const mongoose = require('mongoose');
+const connectDB = require('./config/db');
+const dotenv = require('dotenv');
 const homeRoutes = require('./routes/homeRoutes');
 const guideRoutes = require('./routes/guideRoutes');
 const feedbackRoutes = require('./routes/feedbackRoutes');
 
+require('dotenv').config();
+
+connectDB();
+
 const app = express();
 
-const port = 5000;
+const port = process.env.PORT || 5000;
 
-const URI = "mongodb+srv://sabrarulhaq:sabrarulhaq2001@alphapianocluster.7536o.mongodb.net/alphaPianoData?retryWrites=true&w=majority";
-mongoose.connect(URI)
-    .then((result) => {
-        app.listen(port, () => console.log(`Server running at http://127.0.0.1:${port}`));
-        console.log("Connected to mongodb");
-    })
-    .catch((err) => console.log(err))
+app.listen(port, console.log(`Server running on port ${port}`));
 
 app.set('view engine', 'ejs');
 
