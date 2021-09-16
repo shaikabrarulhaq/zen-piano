@@ -6,7 +6,7 @@ const feedbackRoutes = require('./routes/feedbackRoutes');
 
 const app = express();
 
-const port = 80;
+const port = 5000;
 
 const URI = "mongodb+srv://sabrarulhaq:sabrarulhaq2001@alphapianocluster.7536o.mongodb.net/alphaPianoData?retryWrites=true&w=majority";
 mongoose.connect(URI)
