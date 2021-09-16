@@ -5,8 +5,11 @@
 
 <body class="disable-select">
   <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navMenu" aria-controls="navbarText" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
     <div class="container-fluid">
-      <div class="nav-div collapse navbar-collapse" id="navbarSupportedContent">
+      <div class="nav-div collapse navbar-collapse" id="navMenu">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
             <a class="nav-link" aria-current="page" href="/">Home</a>
@@ -22,7 +25,7 @@
     </div>
   </nav>
 
-  <p class="intro-feedback mb-4">
+  <p class="intro-feedback mt-5">
     How was it? Suggest any improvement if needed, else can just chill out :D
   </p>
 
@@ -30,15 +33,15 @@
     <form id="contactForm" action="/feedback" method="POST">
       <div class="mb-4">
         <label class="form-label" for="name">Name</label>
-        <input class="form-control" id="name" type="text" placeholder="Kamaboko Gonpachiro" name="name"/>
+        <input class="form-control" id="name" type="text" placeholder="Kamaboko Gonpachiro" name="name" required/>
       </div>
       <div class="mb-4">
         <label class="form-label" for="emailAddress">Email Address</label>
-        <input class="form-control" name="email" id="emailAddress" type="email" placeholder="abc@email.com" style/>
+        <input class="form-control" name="email" id="emailAddress" type="email" placeholder="abc@email.com" required/>
       </div>
       <div class="mb-5">
         <label class="form-label" for="message">Message</label>
-        <textarea class="form-control" name="message" id="message" type="text" placeholder="Message" style="height: 10rem;"></textarea>
+        <textarea class="form-control" name="message" id="message" type="text" placeholder="Message" style="height: 10rem;" required></textarea>
       </div>
       <div class="d-grid mb-4">
         <button class="btn btn-primary btn-lg bg-dark" type="submit">Submit</button>
@@ -48,6 +51,9 @@
 
   <%- include('./partials/footer.ejs') %>
 
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </body>
 
 </html>
