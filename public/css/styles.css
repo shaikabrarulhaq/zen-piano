@@ -71,12 +71,12 @@ span {
 }
 
 .white-key {
-    background: #fff;
+    background: #fafafa;
     border-top: 1px solid rgba(32, 32, 32, .3);
     border-right: 1px solid rgba(32, 32, 32, .3);
     border-bottom: 1px solid rgba(32, 32, 32, .3);
-    border-radius: 3px 3px 5px 5px;
-    box-shadow: 0 7px 1px rgb(32, 32, 32, .3);
+    border-radius: 10px 10px 10px 10px;
+    box-shadow: 0 7px 1px rgb(32, 32, 32, .3), inset -4px -4px 10px #ddd;
     width: 60px;
     height:300px;
     transition: background-color 20ms ease,box-shadow 20ms ease;
@@ -85,44 +85,48 @@ span {
 }
 
 .black-key {
-    background: #111;
+    background: #2e3338;
     transition: background-color 20ms ease,box-shadow 20ms ease;
-    box-shadow: 0 7px 1px rgb(32, 32, 32, .2);
+    box-shadow: 0 5px 1px rgb(32, 32, 32, .2), inset -4px -4px 10px #000;
     border-width: 1px;
-    border-radius: 3px 3px 5px 5px;
+    border-radius: 10px 10px 10px 10px;
     border-style: solid;
     border-color: #666 #111 #111 #666;
     height: 170px;
     position: absolute;
     width:40px;
     margin-left: -20px;
-    z-index: 5;
+    z-index: 10;
     color: #fff;
     font-weight: bold;
 }
 
 .white-key.active {
-    transform: translateY(7px);
+    transform-origin: 0% 0%;
+    transform: scale(1, 1.01);
     background-color: rgb(215, 215, 215);
-    box-shadow: none;
+    box-shadow: 0 4px 1px rgb(32, 32, 32, .3), inset -4px -4px 10px #eee;
 }
 
 .black-key.active {
-    transform: translateY(7px);
-    background-color: rgb(25, 25, 25);
-    box-shadow: none;
+    transform-origin: 0% 0%;
+    transform: scale(1, 1.01);
+    background-color: #111;
+    box-shadow: 0 3px 1px rgb(32, 32, 32, .2), inset -4px -4px 10px #333;
 }
 
 .guide > li > .white-key:active {
-    transform: translateY(7px);
+    transform-origin: 0% 0%;
+    transform: scale(1, 1.01);
     background-color: rgb(215, 215, 215);
-    box-shadow: none;
+    box-shadow: 0 4px 1px rgb(32, 32, 32, .3), inset -4px -4px 10px #eee;
 }
 
 .guide > li > .black-key:active {
-    transform: translateY(7px);
-    background-color: rgb(25, 25, 25);
-    box-shadow: none;
+    transform-origin: 0% 0%;
+    transform: scale(1, 1.01);
+    background-color: #111;
+    box-shadow: 0 3px 1px rgb(32, 32, 32, .2), inset -4px -4px 10px #333;
 }
 
 ul {
